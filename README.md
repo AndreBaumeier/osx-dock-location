@@ -9,6 +9,7 @@ source (docklocation.applescript) is in source/docklocation.applescript
 
 to run the script just compile it yourself from source:
 
-terminal$ osacompile -s -o docklocation.app docklocation.applescript
-
-terminal$ open docklocation.app
+```terminal
+osacompile -s -o docklocation.app docklocation.applescript
+open docklocation.app
+```
