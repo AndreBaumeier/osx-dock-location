@@ -30,6 +30,9 @@ on change_dock()
 	set last_orientation to orientation
 	set last_width to screen_width
 	
+	tell me
+	activate
+	
 	--use this if you want to run it with osascript
 	--tell application "System Events" to display dialog "Move Dock?" buttons {"no", "left", "right"} default button 1
 	
@@ -41,6 +44,7 @@ on change_dock()
 		do shell script "defaults write com.apple.dock orientation right && killall -HUP Dock"
 		set last_orientation to "right"
 	end if
+	end tell
 	return seconds_between_check
 end change_dock
 
